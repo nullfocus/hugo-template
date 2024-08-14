@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+{{ if .Date }}
+    <p>{{ .Date | time.Format ":date_long" }}<p>
+{{ end }}
+
+<h1>{{ .Title }}</h1>
+<h2>{{ .Summary }}</h2>
+<p>{{ .Content }}</p>
+
+{{ end }}
