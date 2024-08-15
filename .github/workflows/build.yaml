@@ -31,4 +31,7 @@ jobs:
           submodules: recursive
       - name: Check files
         run: |
+          pwd
+          ls -laR
+          cd /
           ls -la
