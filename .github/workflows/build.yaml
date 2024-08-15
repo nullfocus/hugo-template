@@ -1,7 +1,6 @@
 name: Build hugo site
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
 
@@ -18,20 +17,20 @@ jobs:
   # Build job
   build:
     name: Build hugo site
-    runs-on: ubuntu-latest # ???
+    runs-on: ubuntu-latest
     container:
       image: hugomods/hugo:exts
       volumes: 
-        - /src/src
+        - ./src:/src
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # fetch all history for .GitInfo and .Lastmod
+          fetch-depth: 0 
           submodules: recursive
-      - name: Check files
+      - name: Run commands
         run: |
           pwd
-          ls -laR
-          cd /
+          ls -la
+          hugo
           ls -la
