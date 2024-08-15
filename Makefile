@@ -1,8 +1,5 @@
 PORT := 1313
-USERID := $(shell id -u):$(shell id -g)
-
-test:
-	echo $(USERID)
+USERID := $(shell id -u):$(shell id -g) # this gets docker-created files to be written as our user, rather than root
 
 console:
 	docker run \
