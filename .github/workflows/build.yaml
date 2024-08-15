@@ -30,7 +30,7 @@ jobs:
           submodules: recursive
       - name: Run commands
         run: |
-          pwd
+          cd src
           ls -la
           hugo
           ls -la
