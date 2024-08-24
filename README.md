@@ -30,4 +30,9 @@ make serve
 
 # Netlify deployment setup
 
-In your repo, create secrets for `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID`. Populate them with values from your Netlify login.
+1. Create or login to your Netlify account. 
+2. Create a new blank site.
+3. Copy the new site identifier
+4. Generate and copy a personal access token
+5. In your repo, create secrets for `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID` and populate them with the values above.
+6. Now all merges on `main` will trigger a build and deployment.
